@@ -20,7 +20,14 @@ if (!file_exists($path)) {
     notfound();
 } else if (file_exists("$path-SPAM")) {
     notfound();
-} else if (@readfile($path) === false) {
+}
+
+$flen = filesize($path);
+if ($flen !== false) {
+    header("Content-Length: $flen");
+}
+
+if (@readfile($path) === false) {
     notfound();
 }
 
