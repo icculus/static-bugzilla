@@ -1,0 +1,44 @@
+<Files .git>
+    Require all denied
+</Files>
+
+<Files .github>
+    Require all denied
+</Files>
+
+<Files .gitignore>
+    Require all denied
+</Files>
+
+<Files .htaccess>
+    Require all denied
+</Files>
+
+<Files attachments>
+    Require all denied
+</Files>
+
+<Files bugs_html>
+    Require all denied
+</Files>
+
+<Files original_bugs_html>
+    Require all denied
+</Files>
+
+<Files LICENSE.txt>
+    Require all denied
+</Files>
+
+<Files README.md>
+    Require all denied
+</Files>
+
+<Files make_bugzilla_static_readonly.pl>
+    Require all denied
+</Files>
+
+<Files template.html>
+    Require all denied
+</Files>
+
