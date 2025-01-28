@@ -51,7 +51,7 @@ their original URLs; everything else goes to a 404 page.
 
 If you're replacing Bugzilla:
 
-- Edit 404.html and replace `noreply@example.com` with your email address (or
+- Edit index.html and replace `noreply@example.com` with your email address (or
   change the text in some other way).
 - After the script runs successfully, shut down Bugzilla on your server and
   move the install out of the way. Copy this directory in its place, so that
@@ -63,9 +63,9 @@ If you're replacing Bugzilla:
   have a second domain for attachments (for some security reason I never
   understood), so attachment.cgi might run from, say, bugzilla.example.com and
   also bugzilla-attachments.example.com, depending on your site's config.)
-- Make sure the webserver serves 404.html for all 404 responses, which
+- Make sure the webserver serves index.html for all 404 responses, which
   explains that Bugzilla is gone and most of its URLs are no longer available.
-  Feel free to edit this 404.html as appropriate.
+  Feel free to edit this index.html as appropriate.
 - Make sure the webserver serves images/favicon.ico and has the correct mimetype.
 - There is an Apache2 .htaccess file to block off files that shouldn't be
   accessed directly on the web; you might have to deal with yourself this if
