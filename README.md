@@ -71,6 +71,32 @@ If you're replacing Bugzilla:
   accessed directly on the web; you might have to deal with yourself this if
   not using Apache.
 
+My Apache virtual host config looks something like this:
+
+```
+ServerAdmin bugmaster@example.com
+DocumentRoot "/webspace/bugzilla.example.com"
+ServerName bugzilla.example.com
+ServerAlias bugs.example.com
+ServerAlias bugzilla-attachments.example.com
+
+ErrorDocument 404 /index.html
+Alias /show_bug.cgi /webspace/bugzilla.example.com/show_bug.php
+Alias /attachment.cgi /webspace/bugzilla.example.com/attachment.php
+
+<Directory "/webspace/bugzilla.example.com">
+    <IfModule mod_php5.c>
+        php_flag engine on
+    </IfModule>
+
+    DirectoryIndex index.html
+
+    <RequireAll>
+        Require all granted
+    </RequireAll>
+</Directory>
+```
+
 
 Once you're happy with everything:
 
