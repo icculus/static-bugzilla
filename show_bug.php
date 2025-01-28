@@ -18,6 +18,8 @@ $path = "bugs-html/$thousandsdir/$hundredsdir/$id";
 
 if (!file_exists($path)) {
     notfound();
+} else if (file_exists("$path-SPAM")) {
+    notfound();
 } else if (@readfile($path) === false) {
     notfound();
 }
