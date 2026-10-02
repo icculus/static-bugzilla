@@ -1,28 +1,10 @@
-<Files .git>
-    Require all denied
-</Files>
-
-<Files .github>
-    Require all denied
-</Files>
-
-<Files .gitignore>
-    Require all denied
-</Files>
+RedirectMatch 404 /\.git.*$
+RedirectMatch 404 /\.htaccess$
+RedirectMatch 404 /attachments(/.*|$)
+RedirectMatch 404 /bugs-html(/.*|$)
+RedirectMatch 404 /original-bugs-html(/.*|$)
 
 <Files .htaccess>
-    Require all denied
-</Files>
-
-<Files attachments>
-    Require all denied
-</Files>
-
-<Files bugs_html>
-    Require all denied
-</Files>
-
-<Files original_bugs_html>
     Require all denied
 </Files>
 
